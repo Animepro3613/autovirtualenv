@@ -1,22 +1,58 @@
-# AutoVirtualEnv 🐍
+# 🐍 AutoVirtualEnv – VS Code Extension
 
-Automatically create and activate Python virtual environments in your VS Code workspace.
+**AutoVirtualEnv** is a lightweight Visual Studio Code extension that automatically manages Python virtual environments per project.
 
-## Features
+---
 
-- ✅ Detects `.venv` in the root folder
-- 🧪 If missing, creates it using `python -m venv .venv`
-- ⚡ Activates the virtual environment in terminal
-- 🔄 Works on Windows, macOS, and Linux
+### 🚀 Features
 
-## Installation
+- ✅ Detects if a `.venv` virtual environment exists in the project
+- 🆕 Automatically creates a `.venv` if not found
+- ⚙️ Activates the virtual environment in the terminal
+- 🔚 Deactivates when VS Code session ends
 
-### Option 1: From VS Code
+---
 
-1. Press `Ctrl+Shift+P` → Extensions: Install from VSIX
-2. Choose the downloaded `.vsix` file
+### 📦 Installation
 
-### Option 2: From Terminal
+#### From Visual Studio Code Marketplace
 
-```bash
-code --install-extension autovirtualenv-0.0.1.vsix
+1. Open **VS Code**
+2. Go to the **Extensions** tab (Ctrl + Shift + X)
+3. Search for: `AutoVirtualEnv`
+4. Click **Install**
+
+Or install using the CLI:
+
+code --install-extension ashutoshpandey.autovirtualenv
+
+🧠 How It Works
+On workspace open:
+
+Checks if .venv/ exists
+If not → runs: python -m venv .venv
+Activates the environment in the terminal:
+Windows: .venv\Scripts\activate
+Linux/Mac: source .venv/bin/activate
+Deactivates automatically when the terminal closes or VS Code exits
+
+🛠️ Usage
+Open the Command Palette (Ctrl+Shift+P) and run:
+
+AutoVirtualEnv: Run Python in Virtual Env
+
+📁 Project Structure
+
+autovirtualenv/
+├── src/
+│   └── extension.ts
+├── package.json
+├── README.md
+├── tsconfig.json
+├── esbuild.js
+└── ...
+📃 License
+This project is licensed under the MIT License.
+
+👤 Author
+Created by Ashutosh Pandey
