@@ -2,6 +2,16 @@
 
 **AutoVirtualEnv** is a lightweight Visual Studio Code extension that automatically manages Python virtual environments per project.
 
+whenever a folder or project is opened using vs code it creates a .venv environment and activates it thus streamline development.
+
+it does not create more virutal env ones .venv is activated.
+
+It is usefull for new developers who accidently install python lib globally while developing projects.
+
+![Screenshot](./images/1.png)
+![Screenshot](./images/2.png)
+![Screenshot](./images/3.png)
+
 ---
 
 ### 🚀 Features
